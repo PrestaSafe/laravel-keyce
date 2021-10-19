@@ -5,9 +5,12 @@
 
 @section('content')
 <!-- Post content-->
-@foreach ($posts as $post)
+@forelse ($posts as $post)
     @include('partials.post-detail',$post)
-@endforeach
+@empty
+    <div class="alert alert-warning">Aucun resultats de recherche</div>
+@endforelse
+
 
 {{ $posts->links() }}
 

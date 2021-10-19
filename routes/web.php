@@ -28,3 +28,5 @@ Route::get('/a-propos', function(){
 Route::get('/blog',[PostsController::class,'index'])->name('blog');
 
 Route::get('/article/{id}',[PostsController::class,'show'])->name('article');
+
+Route::get('/search/',[PostsController::class,'search'])->name('blogsearch');

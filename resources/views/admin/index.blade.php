@@ -16,8 +16,8 @@
         <tr>
             <th scope="row">{{ $post->id }}</th>
             <td>{{ $post->title }}</td>
-            <td>Editer</td>
-            <td>supprimer</td>
+            <td> <a class="text-primary" href="{{ route('posts.edit',$post) }}">Editer</a> </td>
+            <td>Supprimer</td>
         </tr>
         @empty    
         <tr><th colspan="5">Aucun articles</th></tr>

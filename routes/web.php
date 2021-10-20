@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -42,3 +43,5 @@ Route::get('/blog/category/{slug}',
 // Admin routes. 
 
 Route::get('/admin',[DashboardController::class,'index'])->name('admin');
+
+Route::resource('admin/posts', AdminPostController::class);

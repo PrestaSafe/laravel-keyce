@@ -6,7 +6,9 @@ Cloner le projet:
 
 `composer install`
 
-modifiez le `.env`
+copier `.env.example` et nommez le `.env` puis modifiez le et ajoutez vos informations de base de données. 
+
+Creer la base de données dans phpmyadmin. 
 
 `php artisan migrate:fresh --seed`
 

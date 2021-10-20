@@ -19,6 +19,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-12">
+                    @include('admin.notifications')
                     @yield('content')
                 </div>
             </div>

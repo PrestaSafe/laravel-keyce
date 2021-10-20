@@ -69,7 +69,17 @@ class AdminPostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $post->title = e($request->input('title'));
+        $post->content = e($request->input('content'));
+
+        $categories = $request->input('categories');
+        $post->categories()->detach();
+        $post->categories()->attach($categories);
+        
+        if($post->save()){
+            return redirect()->route('posts.edit',$post)->with('success','Post mis à jour avec succès');
+        }
+        return redirect()->route('posts.edit',$post)->with('danger','Erreur de mise à jour');
     }
 
     /**

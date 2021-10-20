@@ -88,8 +88,19 @@ class AdminPostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post, Request $request)
     {
-        //
+
+        if($post->delete())
+        {
+            if($request->ajax())
+            {
+                return response()->json(['success' => true]);
+            }
+            return redirect()->route('admin')->with('success','post supprimé');   
+        }
+
+        return response()->json(['success' => false]);
+
     }
 }

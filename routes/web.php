@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 /*
@@ -30,3 +31,6 @@ Route::get('/blog',[PostsController::class,'index'])->name('blog');
 Route::get('/article/{id}',[PostsController::class,'show'])->name('article');
 
 Route::get('/search/',[PostsController::class,'search'])->name('blogsearch');
+
+Route::get('/blog/category/{slug}',
+[CategoriesController::class,'index'])->name('category');

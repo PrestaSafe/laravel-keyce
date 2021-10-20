@@ -33,4 +33,4 @@ Route::get('/article/{id}',[PostsController::class,'show'])->name('article');
 Route::get('/search/',[PostsController::class,'search'])->name('blogsearch');
 
 Route::get('/blog/category/{slug}',
-[CategoriesController::class,'index'])->name('category');
+[CategoriesController::class,'show'])->name('category');

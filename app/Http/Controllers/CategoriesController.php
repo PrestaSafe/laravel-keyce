@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
-    public function index($slug)
+    public function show($slug)
     {
         $category = Category::where('slug',$slug)->first();
         return view('blog.category-detail', compact('category'));
     }
+
+
 }

@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,7 @@ use App\Http\Controllers\PostsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/',[PostsController::class,'index'])->name('home');
 
 Route::get('/contact', function(){
@@ -34,3 +38,7 @@ Route::get('/search/',[PostsController::class,'search'])->name('blogsearch');
 
 Route::get('/blog/category/{slug}',
 [CategoriesController::class,'show'])->name('category');
+
+// Admin routes. 
+
+Route::get('/admin',[DashboardController::class,'index'])->name('admin');

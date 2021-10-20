@@ -18,13 +18,8 @@
         <!-- Page content-->
         <div class="container mt-5">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     @yield('content')
-                </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4">
-                    @include('partials.right_column')
-                    @yield('right_column')
                 </div>
             </div>
         </div>

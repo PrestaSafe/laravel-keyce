@@ -17,6 +17,7 @@
         @include('partials.header')
         <!-- Page content-->
         <div class="container mt-5">
+            @include('admin.notifications')
             <div class="row">
                 <div class="col-lg-8">
                     @yield('content')

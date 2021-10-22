@@ -52,6 +52,7 @@
 
 <script type="text/javascript">
   $(function(){
+    
     let form = $('#formContact');
     $(form).on('submit', function(e){
         e.preventDefault();
@@ -59,13 +60,13 @@
             method:'POST',
             url: $(form).attr('action'),
             data: $(form).serialize(),
-            dataType: 'json',
+           
             beforeSend: function()
             {
                 $('.loading').removeClass('d-none');
             },
             success: function(data){
-                console.log(data);
+
                 if(data.success)
                 {
                     $('#ajax_return').empty().html('<div class="alert alert-success">'+data.message+'</div>');

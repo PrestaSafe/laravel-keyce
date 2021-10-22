@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('dist/assets/favicon.ico') }}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('dist/css/styles.css') }}" rel="stylesheet" />
+        @livewireStyles
         @yield('css')
     </head>
     <body>
@@ -29,7 +30,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ asset('dist/js/scripts.js') }}"></script>
-
+        @livewireScripts
         @yield('scripts')
     </body>
 </html>

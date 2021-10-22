@@ -51,4 +51,10 @@ Route::resource('admin/posts', AdminPostController::class);
 Route::get('/login',[DashboardController::class,'login'])->name('login');
 Route::post('/auth',[DashboardController::class,'auth'])->name('auth');
 
+
+Route::get('/cars', function()
+{
+    return view('cars');
+});
+
 require __DIR__.'/custom.php';

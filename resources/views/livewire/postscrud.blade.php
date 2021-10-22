@@ -42,11 +42,11 @@
                         <div class="modal-body">
                             <div class="mb-3">
                                 <label for="title" class="form-label">Post Title</label>
-                                <input type="text" class="form-control" id="title" wire:model="title" placeholder="name@example.com">
+                                <input type="text" class="form-control" id="title" wire:model.defer="title" placeholder="name@example.com">
                               </div>
                               <div class="mb-3">
                                 <label for="content" class="form-label">Content</label>
-                                <textarea class="form-control" id="content" wire:model="content" rows="3"></textarea>
+                                <textarea class="form-control" id="content" wire:model.defer="content" rows="3"></textarea>
                               </div>
                               {{-- <input type="text" wire:model="id_post"> --}}
                         </div>

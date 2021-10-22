@@ -8,10 +8,10 @@ use Livewire\WithPagination;
 
 class Postscrud extends Component
 {
-    // use WithPagination;
-    // public $posts;
+    use WithPagination;
+
     public $search = '';
-    // protected $paginationTheme = 'bootstrap';
+    protected $paginationTheme = 'bootstrap';
     
     // posts
     public $id_post = '';
@@ -39,6 +39,7 @@ class Postscrud extends Component
         Post::destroy($id);
         $this->getPosts();
     }
+    
     public function updatingSearch()
     {
         $this->resetPage();

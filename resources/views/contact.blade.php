@@ -11,22 +11,22 @@
         @csrf
         <div class="form-group mb-4">
             <label for="exampleFormControlInput1">Nom</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="name@example.com">
+            <input type="text" class="form-control" value="{{ old('name') }}" name="name" id="name" placeholder="name@example.com">
         </div>
         
         <div class="form-group mb-4">
             <label for="email">email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+            <input type="email" class="form-control" value="{{ old('email') }}" name="email" id="email" placeholder="name@example.com">
         </div>
 
         <div class="form-group mb-4">
             <label for="sujet">Sujet</label>
-            <input type="text" class="form-control" name="sujet" id="sujet" placeholder="name@example.com">
+            <input type="text" class="form-control" value="{{ old('sujet') }}" name="sujet" id="sujet" placeholder="name@example.com">
         </div>
 
         <div class="form-group mb-4">
             <label for="sujet">message</label>
-            <textarea class="form-control" name="message" id="message" rows="3" placeholder="name@example.com"></textarea>
+            <textarea class="form-control" name="message" id="message" rows="3" placeholder="name@example.com">{{old('message')}}</textarea>
         </div>
         
     

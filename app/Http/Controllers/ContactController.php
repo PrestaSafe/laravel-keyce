@@ -9,6 +9,13 @@ class ContactController extends Controller
 {
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'string|required|min:3',
+            'email' => 'email|required',
+            'sujet' => 'string|required|min:3',
+            'message' => 'string|required|min:5',
+        ]);
+
         $contact = new Contact;
         $contact->name = e($request->input('name'));
         $contact->email = e($request->input('email'));

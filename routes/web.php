@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
@@ -25,7 +24,6 @@ Route::get('/contact', function(){
     return view('contact');
 })->name('contact');
 
-Route::post('/contact/submit',[ContactController::class,'store'])->name('post_contact');
 
 
 
@@ -53,3 +51,4 @@ Route::resource('admin/posts', AdminPostController::class);
 Route::get('/login',[DashboardController::class,'login'])->name('login');
 Route::post('/auth',[DashboardController::class,'auth'])->name('auth');
 
+require __DIR__.'/custom.php';

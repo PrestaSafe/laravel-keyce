@@ -46,6 +46,9 @@ Route::get('/blog/category/{slug}',
 
 Route::get('/admin',[DashboardController::class,'index'])->middleware('auth')->name('admin');
 
+
+Route::get('/admin/contact',[DashboardController::class,'contact'])->middleware('auth')->name('admin_contact');
+
 Route::resource('admin/posts', AdminPostController::class);
 
 Route::get('/login',[DashboardController::class,'login'])->name('login');

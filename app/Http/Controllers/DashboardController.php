@@ -32,4 +32,10 @@ class DashboardController extends Controller
         }
         return redirect()->route('login')->with('danger','Impossible de vous identifier');
     }
+
+
+    public function contact()
+    {
+        return view('admin.contact-list');
+    }
 }
